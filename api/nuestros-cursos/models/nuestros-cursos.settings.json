@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "nuestros_cursos",
+  "info": {
+    "name": "NuestrosCursos",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre_cursos": {
+      "type": "string",
+      "required": true
+    },
+    "descripcion_curso": {
+      "type": "text",
+      "required": true
+    },
+    "imagen_curso": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "url_curso": {
+      "type": "uid"
+    },
+    "resumen_curso": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
